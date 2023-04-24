@@ -31,7 +31,7 @@
       <tbody>
         <% period.days.forEach(function(day) { %>
           <tr>
-            <td><%= day.day %></td>
+            <td><%= day.day.getMonth() + 1 %>/<%= day.day.getDate() %>/<%= day.day.getFullYear() %></td>
             <td><%= day.pain %></td>
             <td><%= day.flow %></td>
             <td><%= day.mood %></td>
@@ -66,8 +66,8 @@
     <option value="4">4</option>
     <option value="5" selected>5</option>
   </select>
-  <label for="content-textarea">Mood:</label>
-  <textarea name="content" id="content-textarea"></textarea>
+  <label for="mood-textarea">Mood:</label>
+  <textarea name="mood" id="mood-textarea"></textarea>
   <button type="submit">Add Day</button>
   </form>
 </div>

@@ -93,6 +93,7 @@ function createDay(req, res) {
   Period.findById(req.params.periodId)
   .then (period => {
     period.days.push(req.body)
+    console.log(req.body, "I am mood!")
     period.save()
     .then(() => {
       res.redirect(`/periods/${period._id}`)
