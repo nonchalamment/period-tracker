@@ -3,9 +3,10 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const daySchema = new Schema({
+  day: {type: Date, required: true},
   pain: Number,
+  flow: String,
   mood: String,
-  flow: String
 }, {
   timestamps: true
 })
@@ -21,7 +22,7 @@ const periodSchema = new Schema({
       return new Date(+new Date() + 7*24*60*60*1000)
   }},
   profile: {type: Schema.Types.ObjectId, ref: 'Profile' },
-  day: [daySchema]
+  days: [daySchema]
 }, {
   timestamps: true
 })

@@ -17,5 +17,59 @@
     <button>Edit Period</button>
   </a>
 </div>
+<div>
+  <% if (period.days.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Pain</th>
+          <th>Flow</th>
+          <th>Mood</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% period.days.forEach(function(day) { %>
+          <tr>
+            <td><%= day.day %></td>
+            <td><%= day.pain %></td>
+            <td><%= day.flow %></td>
+            <td><%= day.mood %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h3>No Days Added Yet</h3>
+  <% } %>
+</div>
+<div>
+  <form id="add-days-form"
+  action="/periods/<%= period._id %>/days"
+  method="POST"
+  >
+  <label for="day">Date:</label>
+  <input type="datetime-local" name="day" id="day-input">
+  <label for="pain-select">Pain (scale of 1 to 5):</label>
+  <select name="pain" id="pain-select">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5" selected>5</option>
+  </select>
+  <label for="flow-select">Flow (scale of 1 to 5):</label>
+  <select name="flow" id="flow-select">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5" selected>5</option>
+  </select>
+  <label for="content-textarea">Mood:</label>
+  <textarea name="content" id="content-textarea"></textarea>
+  <button type="submit">Add Day</button>
+  </form>
+</div>
   
 <%- include('../partials/footer') %>

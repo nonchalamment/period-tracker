@@ -89,6 +89,25 @@ function update(req, res) {
   })
 }
 
+function createDay(req, res) {
+  Period.findById(req.params.periodId)
+  .then (period => {
+    period.days.push(req.body)
+    period.save()
+    .then(() => {
+      res.redirect(`/periods/${period._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
   newPeriod as new,
@@ -97,4 +116,5 @@ export {
   show,
   edit,
   update,
+  createDay,
 }

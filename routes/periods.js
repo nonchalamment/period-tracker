@@ -18,6 +18,8 @@ router.get('/:periodId', periodsCtrl.show)
 router.get('/:periodId/edit', periodsCtrl.edit)
 // localhost:3000/periods/:periodId
 router.put('/:periodId', periodsCtrl.update)
+// POST localhost:3000/periods/:periodId/days
+router.post('/:periodId/days', periodsCtrl.createDay)
 
 export {
   router
