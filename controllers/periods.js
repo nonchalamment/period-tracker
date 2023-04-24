@@ -79,6 +79,14 @@ function update(req, res) {
   for (let key in req.body) {
     if(req.body[key] === "") delete req.body[key]
   }
+  Period.findByIdAndUpdate(req.params.periodId, req.body, {new: true})
+  .then(period => {
+    res.redirect(`/periods/${period._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 export {
