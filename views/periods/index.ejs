@@ -2,11 +2,20 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Period Tracker</h1>
-  <h2>let's get trackin'!</h2>
+  <h1>Let's get trackin'!</h1>
   <ul>
     <% periods.forEach(period => { %>
-      <li>🌮 <%= period.name %> starts <%= period.startDate %> and ends <%= period.endDate %></li>
+      <li><%= period.name %> Starts 
+        <%= period.startDate.getMonth() + 1 %>/<%= period.startDate.getDate() %>/<%= period.startDate.getFullYear() %>
+        and ends 
+        <%= period.endDate.getMonth() + 1 %>/<%= period.endDate.getDate() %>/<%= period.endDate.getFullYear() %>
+        <a href="/periods/<%= period._id %>">DETAILS</a>
+        <form 
+        action="/periods/<%= period._id %>?_method=DELETE" 
+        method="POST"
+      >
+        <button type="submit">X</button>
+      </li>
     <% }) %>
   </ul>
 </section>

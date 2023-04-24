@@ -1,0 +1,21 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/style.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <section>
+    <div>Start Date: </div>
+    <div><%= period.startDate.getMonth() + 1 %>/<%= period.startDate.getDate() %>/<%= period.startDate.getFullYear() %>
+    </div>
+    <div>End Date: </div>
+    <div><%= period.endDate.getMonth() + 1 %>/<%= period.endDate.getDate() %>/<%= period.endDate.getFullYear() %>
+    </section>
+</main>
+<div>
+  <a href="/periods/<%= period._id %>/edit">
+    <button>Edit Period</button>
+  </a>
+</div>
+  
+<%- include('../partials/footer') %>

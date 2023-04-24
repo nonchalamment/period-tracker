@@ -11,11 +11,15 @@ const daySchema = new Schema({
 })
 
 const periodSchema = new Schema({
-  startDate: {type: Date, default: function() {
-    const d = new Date().getTime();
-    return d;
+  startDate: {
+    type: Date,
+    default: () => new Date()
+  }, 
+  endDate: {
+    type: Date,
+    default: () => {
+      return new Date(+new Date() + 7*24*60*60*1000)
   }},
-  endDate: Date,
   profile: {type: Schema.Types.ObjectId, ref: 'Profile' },
   day: [daySchema]
 }, {

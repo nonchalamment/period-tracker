@@ -4,16 +4,18 @@
 
 
 <section>
-  <h1>Add New Period!</h1>
-	<%# New Code Below %>
+  <h1>Edit Period!</h1>
   <% if (user) { %>
-    <h2>Add a Period!</h2>
-    <form action="/periods" method="POST">
+    <form 
+    id="new-form" 
+    action="/periods/<%= period._id %>?_method=PUT" 
+    method="POST"
+  > 
       <label for="starts">Start Date:</label>
       <input type="datetime-local" name="startDate" id="starts-input">
       <label for="ends">End Date:</label>
       <input type="datetime-local" name="endDate" id="ends-input">
-      <button type="submit">Add Period</button>
+      <button type="submit">Edit Period</button>
     </form>
   <% } %>
 
