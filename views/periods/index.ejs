@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Period Tracker</h1>
+  <h2>let's get trackin'!</h2>
+  <ul>
+    <% periods.forEach(period => { %>
+      <li>🌮 <%= period.name %> starts <%= period.startDate %> and ends <%= period.endDate %></li>
+    <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>
