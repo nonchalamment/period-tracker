@@ -35,6 +35,10 @@
             <td><%= day.pain %></td>
             <td><%= day.flow %></td>
             <td><%= day.mood %></td>
+            <td>
+              <a href="/periods/<%= period._id %>/days/<%= day._id %>/edit">
+              <button class="btn">Edit Day</button>
+            </td>
           </tr>
         <% }) %>
       </tbody>

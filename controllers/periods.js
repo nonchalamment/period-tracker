@@ -93,7 +93,6 @@ function createDay(req, res) {
   Period.findById(req.params.periodId)
   .then (period => {
     period.days.push(req.body)
-    console.log(req.body, "I am mood!")
     period.save()
     .then(() => {
       res.redirect(`/periods/${period._id}`)
@@ -109,6 +108,27 @@ function createDay(req, res) {
   })
 }
 
+function editDay(req, res) {
+  Period.findById(req.params.periodId)
+  .then(period => {
+    const day = period.days.id(req.params.dayId)
+    console.log(day)
+    res.render('periods/editDay', {
+      period: period,
+      day: day,
+      title: 'Update Day'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/periods')
+  })
+}
+
+function updateDay(req, res) {
+
+}
+
 export {
   index,
   newPeriod as new,
@@ -118,4 +138,6 @@ export {
   edit,
   update,
   createDay,
+  editDay,
+  updateDay,
 }
