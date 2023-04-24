@@ -1,0 +1,13 @@
+<section>
+  <h1>Add New Period!</h1>
+	<%# New Code Below %>
+  <% if (user) { %>
+    <h2>Add a Period!</h2>
+    <form action="/periods" method="POST">
+      <label for="starts">Start Date:</label>
+      <input type="datetime-local" name="starts" id="starts-input">
+      <label for="ends">End Date:</label>
+      <input type="datetime-local" name="ends" id="ends-input">
+      <button type="submit">Add Period</button>
+    </form>
+  <% } %>

@@ -62,6 +62,7 @@ app.use(passDataToView)
 // mount imported routes
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
+app.use('/periods', periodRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

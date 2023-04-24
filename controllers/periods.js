@@ -14,6 +14,11 @@ function index(req, res) {
   })
 }
 
+function newPeriod(req, res) {
+
+}
+
 export {
-  index
+  index,
+  newPeriod as new,
 }
