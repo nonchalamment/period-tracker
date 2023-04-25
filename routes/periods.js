@@ -33,8 +33,12 @@ router.put(
   periodsCtrl.updateDay
 )
 
-
 // DELETE localhost:3000/periods/:periodId/days/:dayId
+router.delete(
+  '/:periodId/days/:dayId',
+  isLoggedIn,
+  periodsCtrl.deleteDay
+)
 
 export {
   router

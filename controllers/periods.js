@@ -144,6 +144,26 @@ function updateDay(req, res) {
   })
 }
 
+function deleteDay(req, res) {
+  Period.findById(req.params.periodId)
+  .then(period => {
+    const day = period.days.id(req.params.dayId)
+    period.days.remove(day)
+    period.save()
+    .then(() => {
+      res.redirect(`/periods/${period._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/periods')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/periods')
+  })
+}
+
 export {
   index,
   newPeriod as new,
@@ -155,4 +175,5 @@ export {
   createDay,
   editDay,
   updateDay,
+  deleteDay,
 }

@@ -39,6 +39,14 @@
               <a href="/periods/<%= period._id %>/days/<%= day._id %>/edit">
               <button class="btn">Edit Day</button>
             </td>
+            <td>
+              <form action="/periods/<%= period._id %>/days/<%= day._id %>?_method=DELETE"
+                method="POST"
+                class="inline"
+              >
+              <button class="btn" type="submit">Delete Day</button>
+              </form>
+            </td>
           </tr>
         <% }) %>
       </tbody>
