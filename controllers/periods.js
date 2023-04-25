@@ -1,7 +1,7 @@
 import { Period } from '../models/period.js'
 
 function index(req, res) {
-  Period.find({})
+  Period.find({ profile: req.user.profile._id })
   .then(periods => {
     res.render('periods/index', {
       periods: periods,
@@ -24,10 +24,9 @@ function create(req, res) {
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }
-  console.log(req.body, "this is req.body!")
+  req.body.profile = req.user.profile._id
   Period.create(req.body)
   .then(period => {
-    console.log(period, "this is period!")
     res.redirect('/periods')
   })
   .catch(err => {
@@ -48,6 +47,7 @@ function deletePeriod(req, res) {
 }
 
 function show(req, res) {
+  // Period.find({ _id: req.params.periodId, author: req.user.profile._id })
   Period.findById(req.params.periodId)
   .then(period => {
     res.render('periods/show', {
@@ -112,7 +112,6 @@ function editDay(req, res) {
   Period.findById(req.params.periodId)
   .then(period => {
     const day = period.days.id(req.params.dayId)
-    console.log(day)
     res.render('periods/editDay', {
       period: period,
       day: day,
@@ -126,7 +125,23 @@ function editDay(req, res) {
 }
 
 function updateDay(req, res) {
-
+  Period.findById(req.params.periodId)
+  .then(period => {
+    const day = period.days.id(req.params.dayId)
+    day.set(req.body)
+    period.save()
+    .then(() => {
+      res.redirect(`/periods/${period._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/periods')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/periods')
+  })
 }
 
 export {

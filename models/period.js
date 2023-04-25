@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const daySchema = new Schema({
   day: {type: Date, required: true},
   pain: Number,
-  flow: String,
+  flow: Number,
   mood: String,
 }, {
   timestamps: true
