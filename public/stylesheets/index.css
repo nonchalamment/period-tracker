@@ -2,5 +2,18 @@
 #splash-heading {
   font-family: Power-Bubble;
   font-size: 5rem;
-  margin-top: 15%;
+  padding-top: 15%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#periodtrackertitle {
+  font-family: Power-Bubble;
+  font-size: 6rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#profileimage {
+  margin-left: 0;
 }

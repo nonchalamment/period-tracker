@@ -16,11 +16,16 @@ html {
   src: url(PowerBubble.ttf);
 }
 
+@font-face {
+  font-family: Raleway;
+  src: url(Raleway-VariableFont_wght.ttf);
+}
+
 body {
-  background-color: #f9b4d7;
+  background-color: #ebc9da;
   color: #352929;
   /* Use a system font, if none are available use any found sans-sarif font */
-  font-family: 
+  font-family: Raleway;
   margin: 0;
 }
 
@@ -32,7 +37,7 @@ main {
 }
 
 nav {
-  background-color: #d282b6;
+  background-color: #e2aed0;
   border-radius: 15px;
   display: flex;
   flex-direction: row;
@@ -48,6 +53,7 @@ nav > div {
   padding: 0 1rem;
   font-family: Power-Bubble;
   font-size: 2rem;
+
 }
 
 div > a {
@@ -57,13 +63,34 @@ div > a {
 
 div > a:hover {
   color: white;
-  text-decoration: underline;
 }
 
 .right {
   margin-left: 0;
 }
 
+.navlink:hover {
+  background-color: #ad5c90;
+  border-radius: 20px;
+}
+
 #navleft {
+  margin-left: 0;
+}
+
+#logoutbutton {
+  font-family: Power-Bubble;
+  font-size: 2rem;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: #ffffff;
+}
+
+#logoutbutton:hover {
+  background-color: #d497b6;
+}
+
+nav > .profileimage {
+  align-self: flex-start;
   margin-left: 0;
 }
