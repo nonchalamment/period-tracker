@@ -24,8 +24,15 @@ body {
   margin: 0;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 nav {
-  background-color: #c167a2;
+  background-color: #d282b6;
   border-radius: 15px;
   display: flex;
   flex-direction: row;
@@ -38,20 +45,19 @@ nav {
 }
 
 nav > div {
-  padding: 0 10px;
+  padding: 0 1rem;
   font-family: Power-Bubble;
+  font-size: 2rem;
+}
+
+div > a {
   text-decoration: none;
+  color: #282828;
 }
 
-nav > a:hover {
+div > a:hover {
   color: white;
-}
-
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  text-decoration: underline;
 }
 
 .right {

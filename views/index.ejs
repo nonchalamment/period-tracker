@@ -2,7 +2,7 @@
 <%- include('./partials/nav') %>
 <link rel="stylesheet" href="/stylesheets/index.css" />
 <main>
-  <h1 id="splash-heading">Welcome<%= user ? ", " + user.profile.name + "!" : "! Please log in to unlock." %></h1>
+  <h1 id="splash-heading">Welcome<%= user ? ", " + user.profile.name + "!" : "! Log in to unlock Period Tracker!"%></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
