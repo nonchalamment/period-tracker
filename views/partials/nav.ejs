@@ -5,14 +5,17 @@
 <body>
   <nav>
     <% if (user) { %>
+      <div id="navleft">
+        <a href="/" id="home">Home</a>
+      </div>
       <div>
         <a href="/periods" id="viewperiods">View Periods</a>
       </div>
       <div>
         <a href="/periods/new" id="newperiod">New Period</a>
       </div>
-      <div>
-        <a href="/auth/logout" class="right">
+      <div class="right">
+        <a href="/auth/logout">
           <button type="submit">Logout</button>  
       </div>
       </a>
