@@ -11,6 +11,11 @@ html {
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: Power-Bubble;
+  src: url(PowerBubble.ttf);
+}
+
 body {
   background-color: #1a1a1a;
   color: #f6f6f6;
@@ -22,11 +27,17 @@ body {
 
 nav {
   background-color: #f6f6f6;
-  color: #1a1a1a;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: #1a1a1a;
   align-items: center;
   padding: 10px;
   min-height: 60px;
+}
+
+nav > div {
+  padding: 0 10px;
 }
 
 main {
@@ -37,5 +48,10 @@ main {
 }
 
 .right {
-  margin-left: auto;
+  margin-left: 0;
+}
+
+#splash-heading {
+  font-family: Power-Bubble;
+  font-size: 5rem;
 }
