@@ -90,7 +90,13 @@ div > a:hover {
   background-color: #d497b6;
 }
 
-nav > .profileimage {
-  align-self: flex-start;
+#profilepicture {
   margin-left: 0;
+  margin-right: auto;
+  align-items: center;
+}
+
+#profileimage {
+  border-radius: 43px;
+  border: #d01984 solid 4px;
 }

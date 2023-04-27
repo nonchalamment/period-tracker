@@ -4,6 +4,15 @@
 </head>
 <body>
   <nav>
+    <% if (user?.profile.avatar) { %>
+      <div id="profilepicture">
+        <img
+          src="<%= user.profile.avatar %>"
+          alt="<%= user.profile.name %> avatar"
+          id="profileimage"
+        />
+      </div>
+    <% } %>
     <% if (user) { %>
       <div class="navlink" id="navleft">
         <a href="/" id="home">Home</a>
