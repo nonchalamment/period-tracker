@@ -96,6 +96,10 @@ div > a:hover {
   align-items: center;
 }
 
+#usernamedisplay {
+  margin-left: 0;
+}
+
 #profileimage {
   border-radius: 43px;
   border: #d01984 solid 4px;
