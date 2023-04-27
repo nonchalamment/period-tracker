@@ -3,5 +3,5 @@ import '@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css';
 import '@uvarov.frontend/vanilla-calendar/build/themes/light.min.css';
 import '@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css';
 
-const calendar = new VanillaCalendar('#calendar');
-calendar.init();
+const calendarEl = document.querySelector('#calendar');
+new VanillaCalendar(calendarEl);
