@@ -1,23 +1,25 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-
-<section>
-  <h1>Let's get trackin'!</h1>
-  <ul>
-    <% periods.forEach(period => { %>
-      <li><%= period.name %> Starts 
-        <%= period.startDate.getMonth() + 1 %>/<%= period.startDate.getDate() %>/<%= period.startDate.getFullYear() %>
-        and ends 
-        <%= period.endDate.getMonth() + 1 %>/<%= period.endDate.getDate() %>/<%= period.endDate.getFullYear() %>
-        <a href="/periods/<%= period._id %>">DETAILS</a>
-        <form 
-        action="/periods/<%= period._id %>?_method=DELETE" 
-        method="POST"
-      >
-        <button type="submit">X</button>
-      </li>
-    <% }) %>
-  </ul>
-</section>
+<link rel="stylesheet" href="/stylesheets/periods.css" />
+<main>
+  <section>
+    <h1 id="h1-period-index">Let's get trackin'!</h1>
+    <ul>
+      <% periods.forEach(period => { %>
+        <li><%= period.name %> Starts 
+          <%= period.startDate.getMonth() + 1 %>/<%= period.startDate.getDate() %>/<%= period.startDate.getFullYear() %>
+          and ends 
+          <%= period.endDate.getMonth() + 1 %>/<%= period.endDate.getDate() %>/<%= period.endDate.getFullYear() %>
+          <a href="/periods/<%= period._id %>">DETAILS</a>
+          <form 
+          action="/periods/<%= period._id %>?_method=DELETE" 
+          method="POST"
+        >
+          <button type="submit">X</button>
+        </li>
+      <% }) %>
+    </ul>
+  </section>
+</main>
 
 <%- include('../partials/footer') %>
