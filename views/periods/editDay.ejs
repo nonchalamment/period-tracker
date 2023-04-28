@@ -1,8 +1,8 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/style.css" />
+<link rel="stylesheet" href="/stylesheets/periods.css" />
 <%- include('../partials/nav') %>
 
-<table>
+<table id="showmainformtable">
   <thead>
     <tr>
       <th>Date</th>
@@ -21,32 +21,40 @@
   </tbody>
 </table>
 
-<div>
+<div id="showmainform">
   <form id="add-days-form"
   action="/periods/<%= period._id %>/days/<%= day._id %>?_method=PUT"
   method="POST"
   >
-  <label for="day">Date:</label>
-  <input type="datetime-local" name="day" id="day-input">
-  <label for="pain-select">Pain (scale of 1 to 5):</label>
-  <select name="pain" id="pain-select">
-    <option value="1" selected>1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
+  <div>
+    <label for="day">Date:</label>
+    <input type="datetime-local" name="day" id="day-input">
+  </div>
+  <div>
+    <label for="pain-select">Pain (scale of 1 to 5):</label>
+    <select name="pain" id="pain-select">
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+  <div>
+    <label for="flow-select">Flow (scale of 1 to 5):</label>
+    <select name="flow" id="flow-select">
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
   </select>
-  <label for="flow-select">Flow (scale of 1 to 5):</label>
-  <select name="flow" id="flow-select">
-    <option value="1" selected>1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-  </select>
-  <label for="mood-textarea">Mood:</label>
-  <textarea name="mood" id="mood-textarea"></textarea>
-  <button type="submit">Update Day</button>
+  </div>
+  <div>
+    <label for="mood-textarea">Mood:</label>
+    <textarea name="mood" id="mood-textarea"></textarea>
+  </div>
+  <button class="btn1" type="submit">Update Day</button>
   </form>
 </div>
 

@@ -108,3 +108,55 @@ div > a:hover {
 #periodicon {
   margin: 25px;
 }
+
+#xbutton, #addperiodbtn, #editperiodbtn {
+  font-family: Power-Bubble;
+  font-size: 2rem;
+  border-radius: 15px;
+}
+
+.btn1 {
+  font-family: Power-Bubble;
+  font-size: 1rem;
+  border-radius: 15px;
+}
+
+#xbutton:hover {
+  background-color: #d497b6;
+}
+
+#editperiodbtn {
+  text-align: center;
+}
+
+#showmainform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#showmainform > div {
+  margin: 10px;
+}
+
+#editperiod {
+  display: flex;
+  align-items: center;
+}
+
+#showmainformtable {
+  margin: 0 auto;
+  padding: 30px;
+}
+
+#editperiodbtn {
+  margin: 20px;
+}
+
+.addnewday {
+  border: #ad5c90 solid 4px;
+  border-radius: 60px;
+  width: 30%;
+  margin: 0 auto;
+  padding: 30px;
+}

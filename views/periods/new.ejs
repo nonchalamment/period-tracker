@@ -5,15 +5,23 @@
   <section>
     <h1>Add New Period!</h1>
     <%# New Code Below %>
-    <% if (user) { %>
-      <form action="/periods" method="POST">
-        <label for="starts">Start Date:</label>
-        <input type="datetime-local" name="startDate" id="starts-input">
-        <label for="ends">End Date:</label>
-        <input type="datetime-local" name="endDate" id="ends-input">
-        <button type="submit">Add Period</button>
-      </form>
-    <% } %>
+    <div id="addnew">
+      <% if (user) { %>
+        <form action="/periods" method="POST">
+          <div>
+            <label for="starts" class="startandenddate">Start Date:</label>
+            <input type="datetime-local" name="startDate" id="starts-input">
+          </div>
+          <div>
+            <label for="ends" class="startandenddate">End Date:</label>
+            <input type="datetime-local" name="endDate" id="ends-input">
+          </div>
+          <div>
+            <button type="submit" class="startandenddate" id="addperiodbtn">Add Period</button>
+          </div>
+        </form>
+      <% } %>
+    </div>
   </section>
 </main>
 

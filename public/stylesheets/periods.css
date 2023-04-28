@@ -3,3 +3,24 @@ h1 {
   font-size: 4rem;
   text-align: center;
 }
+
+h2 {
+  font-family: Power-Bubble;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h3 {
+  font-family: Power-Bubble;
+  font-size: 2rem;
+  text-align: center;
+}
+
+body {
+  font-size: 1.25rem;
+}
+
+.startandenddate {
+  margin: 20px 20px;
+}
