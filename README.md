@@ -23,6 +23,10 @@ Node.js
 Express
 <br>
 MongoDB
+<br>
+Google OAuth
+<br>
+EJS
 
 ## Next Steps
 I want to figure out a graphical representation of the date ranges. Working with dates in JavaScript has turned out to be a pain, so it would also be good to figure out a good library to use to make date calculations easier.
