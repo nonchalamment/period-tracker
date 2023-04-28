@@ -10,11 +10,13 @@
         <form action="/periods" method="POST">
           <div>
             <label for="starts" class="startandenddate">Start Date:</label>
-            <input type="datetime-local" name="startDate" id="starts-input">
+            <input type="datetime-local" name="startDate" id="starts-input"
+              value="<%= new Date().toISOString().slice(0, 19) %>">
           </div>
           <div>
             <label for="ends" class="startandenddate">End Date:</label>
-            <input type="datetime-local" name="endDate" id="ends-input">
+            <input type="datetime-local" name="endDate" id="ends-input"
+              value="<%= new Date(+ new Date() + 7*24*60*60*1000).toISOString().slice(0, 19) %>">
           </div>
           <div>
             <button type="submit" class="startandenddate" id="addperiodbtn">Add Period</button>
