@@ -34,26 +34,66 @@
   <div>
     <label for="pain-select">Pain (scale of 1 to 5):</label>
     <select name="pain" id="pain-select">
-      <option value="1" selected>1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
+      <option value="1"
+        <% if (day.pain === 1) { %>
+          selected
+        <% } %>
+      >1</option>
+      <option value="2"
+        <% if (day.pain === 2) { %>
+          selected
+        <% } %>
+      >2</option>      
+      <option value="3"
+        <% if (day.pain === 3) { %>
+          selected
+        <% } %>
+      >3</option>         
+      <option value="4"
+        <% if (day.pain === 4) { %>
+          selected
+        <% } %>
+      >4</option>         
+      <option value="5"
+        <% if (day.pain === 5) { %>
+          selected
+        <% } %>
+      >5</option>    
     </select>
   </div>
   <div>
     <label for="flow-select">Flow (scale of 1 to 5):</label>
     <select name="flow" id="flow-select">
-      <option value="1" selected>1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
+      <option value="1"
+        <% if (day.flow === 1) { %>
+          selected
+        <% } %>
+      >1</option>
+      <option value="2"
+        <% if (day.flow === 2) { %>
+          selected
+        <% } %>
+      >2</option>      
+      <option value="3"
+        <% if (day.flow === 3) { %>
+          selected
+        <% } %>
+      >3</option>         
+      <option value="4"
+        <% if (day.flow === 4) { %>
+          selected
+        <% } %>
+      >4</option>         
+      <option value="5"
+        <% if (day.flow === 5) { %>
+          selected
+        <% } %>
+      >5</option>  
   </select>
   </div>
   <div>
     <label for="mood-textarea">Mood:</label>
-    <textarea name="mood" id="mood-textarea"></textarea>
+    <textarea name="mood" id="mood-textarea"><%= day.mood %></textarea>
   </div>
   <button class="btn1" type="submit">Update Day</button>
   </form>
