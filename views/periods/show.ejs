@@ -64,7 +64,8 @@
     >
     <div>
       <label for="day">Date:</label>
-      <input type="datetime-local" name="day" id="day-input">
+      <input type="datetime-local" name="day" id="day-input"
+        value="<%= period.startDate.toISOString().slice(0,19) %>">
     </div>
     <div>
       <label for="pain-select">Pain (scale of 1 to 5):</label>
