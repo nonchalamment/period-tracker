@@ -13,11 +13,13 @@
       method="POST">
         <div> 
           <label for="starts">Start Date:</label>
-          <input type="datetime-local" name="startDate" id="starts-input">
+          <input type="datetime-local" name="startDate" id="starts-input"
+            value="<%= period.startDate.toISOString().slice(0,19) %>">
         </div>
         <div>
           <label for="ends">End Date:</label>
-          <input type="datetime-local" name="endDate" id="ends-input">
+          <input type="datetime-local" name="endDate" id="ends-input"
+            value="<%= period.endDate.toISOString().slice(0,19) %>">
         </div>
         <button class="btn1" type="submit">Edit Period</button>
       </form>
