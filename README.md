@@ -13,7 +13,7 @@ Period Tracker is a simple MEN Stack app with Google OAuth to keep track of your
 First log in with your Google account, then click on New Period to get started with trackin'! Once you've added a period, click on View Periods then Details to view information about that particular period. From the detail view, you can add new information about each day of your period.
 
 ## Attributions
-The icon comes from [Dmitry Vasiliev](https://thenounproject.com/dimanebo/) from The Noun Project. The font Power Bubble comes from [MJType](https://mjtype.com/). The font Railway comes from [Google Fonts](https://fonts.google.com/specimen/Raleway).
+The icon comes from [Dmitry Vasiliev](https://thenounproject.com/dimanebo/) from The Noun Project. The font Power Bubble comes from [MJType](https://mjtype.com/). The font Raleway comes from [Google Fonts](https://fonts.google.com/specimen/Raleway).
 
 ## Technologies Used
 HTML/CSS/JavaScript
